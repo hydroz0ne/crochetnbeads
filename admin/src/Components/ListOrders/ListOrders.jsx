@@ -7,7 +7,7 @@ const ListOrders = () => {
     const handleDeleteOrder = async (orderId) => {
         if (window.confirm('Are you sure you want to delete this order?')) {
             try {
-                const response = await fetch(`http://localhost:4000/delete-order/${orderId}`, {
+                const response = await fetch(`https://crochetnbeads.onrender.com/delete-order/${orderId}`, {
                     method: 'DELETE'
                 });
 
@@ -23,7 +23,7 @@ const ListOrders = () => {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const response = await fetch('http://localhost:4000/all-orders');
+                const response = await fetch('https://crochetnbeads.onrender.com/all-orders');
                 const data = await response.json();
                 setOrders(data);
             } catch (error) {

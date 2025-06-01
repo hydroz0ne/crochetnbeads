@@ -22,7 +22,7 @@ const EditProduct = () => {
 
     const fetchProducts = async () => {
         try {
-            const response = await fetch('http://localhost:4000/allproducts');
+            const response = await fetch('https://crochetnbeads.onrender.com/allproducts');
             const data = await response.json();
             setProducts(data);
         } catch (error) {
@@ -58,7 +58,7 @@ const EditProduct = () => {
                 const formData = new FormData();
                 formData.append('image', image);
 
-                const uploadResponse = await fetch('http://localhost:4000/upload', {
+                const uploadResponse = await fetch('https://crochetnbeads.onrender.com/upload', {
                     method: 'POST',
                     body: formData
                 });
@@ -73,7 +73,7 @@ const EditProduct = () => {
                 }
             }
 
-            const response = await fetch('http://localhost:4000/editproduct', {
+            const response = await fetch('https://crochetnbeads.onrender.com/editproduct', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

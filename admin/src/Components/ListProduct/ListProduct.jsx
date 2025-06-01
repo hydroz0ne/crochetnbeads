@@ -8,7 +8,7 @@ const ListProduct = () => {
 
     const fetchInfo = async () => {
         try {
-            const response = await fetch("http://localhost:4000/allproducts?isAdmin=true");
+            const response = await fetch("https://crochetnbeads.onrender.com/allproducts?isAdmin=true");
             const data = await response.json();
             setAllProducts(data);
         } catch (error) {
@@ -21,7 +21,7 @@ const ListProduct = () => {
     },[]);
 
     const remove_product = async (id) => {
-        await fetch('http://localhost:4000/removeproduct', {
+        await fetch('https://crochetnbeads.onrender.com/removeproduct', {
             method: "POST",
             headers: {
                 Accept: 'application/json',
@@ -35,7 +35,7 @@ const ListProduct = () => {
 
     const toggleAvailability = async (id) => {
     try {
-        const response = await fetch(`http://localhost:4000/toggle-availability/${id}`, {
+        const response = await fetch(`https://crochetnbeads.onrender.com/toggle-availability/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',

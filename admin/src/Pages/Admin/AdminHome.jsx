@@ -8,7 +8,7 @@ const AdminHome = () => {
   useEffect(() => {
     const fetchProductStats = async () => {
       try {
-        const res = await fetch('http://localhost:4000/allproducts');
+        const res = await fetch('https://crochetnbeads.onrender.com/allproducts');
         const data = await res.json();
 
         const categoryMap = {};
@@ -27,7 +27,7 @@ const AdminHome = () => {
 
     const fetchUsers = async () => {
       try {
-        const res = await fetch('http://localhost:4000/allusers');
+        const res = await fetch('https://crochetnbeads.onrender.com/allusers');
         const data = await res.json();
         setUsers(data);
       } catch (err) {

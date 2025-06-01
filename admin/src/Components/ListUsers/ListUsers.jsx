@@ -11,7 +11,7 @@ const ListUsers = () => {
 
     const fetchUsers = async () => {
         try {
-            const response = await fetch('http://localhost:4000/allusers');
+            const response = await fetch('https://crochetnbeads.onrender.com/allusers');
             const data = await response.json();
             setUsers(data);
         } catch (error) {
@@ -22,7 +22,7 @@ const ListUsers = () => {
     const addUser = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:4000/signup', {
+            const response = await fetch('https://crochetnbeads.onrender.com/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -45,7 +45,7 @@ const ListUsers = () => {
     const handleDelete = async (userId) => {
         if (window.confirm('Are you sure you want to delete this user?')) {
             try {
-                const response = await fetch(`http://localhost:4000/deleteuser/${userId}`, {
+                const response = await fetch(`https://crochetnbeads.onrender.com/deleteuser/${userId}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'

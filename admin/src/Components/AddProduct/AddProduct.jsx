@@ -31,7 +31,7 @@ const AddProduct = () => {
             let formData = new FormData();
             formData.append('image', image); 
     
-            const response = await fetch('http://localhost:4000/upload', {
+            const response = await fetch('https://crochetnbeads.onrender.com/upload', {
                 method: 'POST',
                 body: formData, 
             });
@@ -45,7 +45,7 @@ const AddProduct = () => {
             if (responseData.success) {
                 product.image = responseData.image_url;
                 console.log("Product Details after image upload: ", product);
-                await fetch('http://localhost:4000/addproduct', {
+                await fetch('https://crochetnbeads.onrender.com/addproduct', {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',
