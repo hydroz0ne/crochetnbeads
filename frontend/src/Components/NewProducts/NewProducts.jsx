@@ -7,7 +7,7 @@ const NewProducts = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:4000/newproducts')
+        fetch('https://crochetnbeads.onrender.com/newproducts')
             .then((res) => res.json())
             .then((data) => {
                 setNewProducts(data);

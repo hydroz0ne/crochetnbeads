@@ -7,7 +7,7 @@ const RelatedProducts = ({ item }) => {
 
     useEffect(() => {
         if (item && item.category && item.id !== undefined) {
-            fetch(`http://localhost:4000/relatedproducts?category=${item.category}&excludeId=${item.id}`)
+            fetch(`https://crochetnbeads.onrender.com/relatedproducts?category=${item.category}&excludeId=${item.id}`)
                 .then((res) => res.json())
                 .then((data) => setRelatedProducts(data))
                 .catch((err) => console.error("Failed to fetch related products:", err));

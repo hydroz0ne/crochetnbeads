@@ -16,7 +16,7 @@ const ShopContextProvider = (props) => {
 
     useEffect(() => {
         // Fetch all products
-        fetch('http://localhost:4000/allproducts')
+        fetch('https://crochetnbeads.onrender.com/allproducts')
             .then((res) => res.json())
             .then((data) => setAllProducts(data))
             .catch((err) => console.error('Failed to fetch products:', err));
@@ -24,7 +24,7 @@ const ShopContextProvider = (props) => {
         // Fetch cart items if logged in
         const token = localStorage.getItem('token');
         if (token) {
-            fetch('http://localhost:4000/getcart', {
+            fetch('https://crochetnbeads.onrender.com/getcart', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ const ShopContextProvider = (props) => {
 
         const token = localStorage.getItem('token');
         if (token) {
-            fetch('http://localhost:4000/addtocart', {
+            fetch('https://crochetnbeads.onrender.com/addtocart', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ const ShopContextProvider = (props) => {
 
         const token = localStorage.getItem('token');
         if (token) {
-            fetch('http://localhost:4000/deletefromcart', {
+            fetch('https://crochetnbeads.onrender.com/deletefromcart', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -7,7 +7,7 @@ const Popular = forwardRef((props, ref) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:4000/allproducts')
+        fetch('https://crochetnbeads.onrender.com/allproducts')
             .then((res) => res.json())
             .then((data) => {
                 // Get 8 random products from all categories

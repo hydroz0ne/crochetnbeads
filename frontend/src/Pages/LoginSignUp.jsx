@@ -20,7 +20,7 @@ const LoginSignUp = () => {
 
     const login = async () => {
         try {
-            const response = await fetch('http://localhost:4000/login', {
+            const response = await fetch('https://crochetnbeads.onrender.com/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
@@ -42,7 +42,7 @@ const LoginSignUp = () => {
 
     const signup = async () => {
         try {
-            const response = await fetch('http://localhost:4000/signup', {
+            const response = await fetch('https://crochetnbeads.onrender.com/signup', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
@@ -64,7 +64,7 @@ const LoginSignUp = () => {
 
     const handleGoogleLogin = async (credentialResponse) => {
         try {
-            const res = await fetch('http://localhost:4000/api/auth/google', {
+            const res = await fetch('https://crochetnbeads.onrender.com/api/auth/google', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ token: credentialResponse.credential }),

@@ -67,7 +67,7 @@ const CartProducts = () => {
                 total: getTotalCartAmount() + shippingFee
             };
 
-            const response = await fetch('http://localhost:4000/create-order', {
+            const response = await fetch('https://crochetnbeads.onrender.com/create-order', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
