@@ -104,7 +104,7 @@ const LoginSignUp = () => {
                 </button>
                 <div>
                     <p style={{textAlign: 'center'}}>- or -</p>
-                    <GoogleLogin onSuccess={handleGoogleLogin} onError={() => console.log('Google login failed.')} />
+                    <GoogleLogin style={{textAlign: 'center'}} onSuccess={handleGoogleLogin} onError={() => console.log('Google login failed.')} />
                 </div>
             </div>
         </div>
