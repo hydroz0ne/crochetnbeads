@@ -1,0 +1,19 @@
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: black;
+    font-size: 16px;
+    font-family: "EB Garamond", serif;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 20px 40px;
+    background-color: #FAF2ED;
+}
+
+.rightarrow {
+    color: black;
+    font-size: 24px;
+    margin: 0 8px;
+    width: 12px;
+}

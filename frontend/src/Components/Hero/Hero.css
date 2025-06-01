@@ -1,0 +1,106 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    font-family: "EB Garamond", serif;
+    text-align: center;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FAF2ED;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+  
+.hero-content p {
+    margin-top: 10px;
+    font-size: 20px;
+}
+  
+.hero-shopnow {
+    outline: none;
+    border: 1px solid #4A202A;
+    background-color: #DDC3B5;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    border-radius: 75px;
+    color: #4A202A;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "EB Garamond", serif;
+    transition: background 0.3s ease;
+    margin: 20px 0px;
+}
+  
+.hero-shopnow:hover {
+    background-color: transparent;
+    color: #DDC3B5;
+    border: 1px solid #DDC3B5;
+}  
+
+@media screen and (max-width: 1024px) {
+    .hero-content {
+        width: 90%;
+        padding: 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-shopnow {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}

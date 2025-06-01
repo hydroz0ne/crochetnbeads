@@ -1,0 +1,23 @@
+.adminhome-main {
+    padding: 32px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.adminhome-statbox {
+    margin-top: 32px;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.adminhome-statbox ul {
+    list-style-type: none; 
+    padding-left: 0; 
+}
+
+.adminhome-statbox li {
+    margin-bottom: 8px; 
+}

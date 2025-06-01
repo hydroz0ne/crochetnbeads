@@ -1,0 +1,153 @@
+.productdisplay {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 20px 40px;
+    margin: 0 auto;
+    background-color: #FAF2ED;
+}
+
+.productdisplay-left {
+    display: flex;
+    gap: 20px;
+}
+
+.productdisplay-imagelist {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.productdisplay-imagelist img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.productdisplay-imagelist img:hover {
+    border-color: #4A202A;
+}
+
+.productdisplay-main {
+    flex-grow: 1;
+}
+
+.productdisplay-mainimage {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.productdisplay-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.productdisplay-right h1 {
+    color: #4A202A;
+    margin: 0;
+}
+
+.productdisplay-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.productdisplay-info p {
+    color: #4A202A;
+    margin: 16px 0;
+}
+
+.productdisplay-price {
+    color: #4A202A;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.productdisplay-button {
+    background-color: #4A202A;
+    color: #DDC3B5;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.productdisplay-button:hover {
+    background-color: #DDC3B5;
+    color: #4A202A;
+}
+
+.productdisplay-button.disabled {
+    background-color: #4A202A;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.productdisplay-button.disabled:hover {
+    background-color: #FF0000;
+    transform: none;
+}
+
+.productdisplay-details {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.productdisplay-details h2 {
+    color: #4A202A;
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.productdisplay-details p {
+    color: #4A202A;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px 0px;
+}
+
+.productdisplay-details .category {
+    text-transform: capitalize;
+}
+
+.productdisplay-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    color: #4A202A;
+    font-family: "EB Garamond", serif;
+    background-color: #FAF2ED;
+}
+
+@media (max-width: 768px) {
+    .productdisplay {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .productdisplay-left {
+        flex-direction: column-reverse;
+    }
+
+    .productdisplay-imagelist {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .productdisplay-mainimage {
+        height: 350px;
+    }
+}

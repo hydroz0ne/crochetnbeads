@@ -1,0 +1,152 @@
+.listusers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px 50px;
+    margin: 30px;
+    border-radius: 8px;
+    background-color: #FAF2ED;
+    color: #4A202A;
+}
+
+.listusers h1 {
+    font-family: "EB Garamond", serif;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.listusers p {
+    text-align: center;
+    font-size: 18px;
+    color: #4A202A;
+}
+
+.add-user-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 100%;
+}
+
+.add-user-form h2 {
+    margin-bottom: 20px;
+}
+
+.add-user-form form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.add-user-form input {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+    border: 1px solid #4A202A;
+    border-radius: 6px;
+    font-family: "EB Garamond", serif;
+}
+
+.add-user-form button {
+    padding: 10px 25px;
+    background-color: #4A202A;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: "EB Garamond", serif;
+}
+
+.add-user-form button:hover {
+    background-color: #36161d;
+}
+
+.users-list {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    margin: 20px;
+    width: 100%;
+}
+
+.users-list h2 {
+    margin-bottom: 20px;
+}
+
+.users-header, .user-item {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 0.5fr;
+    align-items: center;
+    padding: 12px 15px;
+    gap: 15px;
+}
+
+.users-header {
+    background-color: #DDC3B5;
+    font-weight: 600;
+    border: 1px solid #36161d;
+}
+
+.user-item {
+    margin: 2px 0;
+}
+
+.user-item button {
+    padding: 6px 14px;
+    background-color: #4A202A;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: "EB Garamond", serif;
+    transition: background 0.3s;
+}
+
+.user-item button:hover {
+    background-color: #36161d;
+}
+
+@media (max-width:800px) {
+    .listusers {
+        padding: 0px 0px;
+        margin: 0px;
+    }
+
+    .add-user-form, .users-list {
+        padding: 15px;
+        margin: 15px;
+        width: 90%;
+        box-sizing: border-box;
+    }
+
+    .users-header {
+        display: none; 
+    }
+
+    .user-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 15px;
+        border: 1px solid #DDC3B5;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        background-color: white;
+    }
+
+    .user-item p {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .user-item button {
+        width: 100%;
+        text-align: center;
+    }   
+}

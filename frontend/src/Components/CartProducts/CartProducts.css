@@ -1,0 +1,214 @@
+.cart-products {
+    margin: 20px 40px;
+    font-family: "EB Garamond", serif;
+}
+
+.cart-products hr {
+    border: none;
+    height: 2px;
+    background-color: #DDC3B5;
+    margin: 20px 0;
+}
+
+.cartproducts-listheader,
+.cart-products-list {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.cartproducts-listheader {
+    color: #4A202A;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.cartitem-image {
+    width: max-content;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.cartitem-amount {
+    width: 60px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: #FAF2ED;
+}
+
+.cartitem-remove {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cartitem-remove:hover {
+    transform: scale(1.1);
+}
+
+.cartproducts-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.cartproducts-checkoutbutton,
+.cartproducts-cancelbutton {
+    flex: 1;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cartproducts-checkoutbutton {
+    background: #DDC3B5;
+    color: #4A202A;
+}
+
+.cartproducts-cancelbutton {
+    background: #4A202A;
+    color: #DDC3B5;
+}
+
+.cartproducts-checkoutbutton:hover {
+    background: #4A202A;
+    color: #DDC3B5;
+}
+
+.cartproducts-cancelbutton:hover {
+    background: #DDC3B5;
+    color: #4A202A;
+}
+
+.cartproducts-checkoutbutton:disabled,
+.cartproducts-cancelbutton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}   
+
+.cartproducts-address {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.cartproducts-addressinput {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #DDC3B5;
+    border-radius: 6px;
+    font-family: "EB Garamond", serif;
+}
+
+.cartproducts-phone {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.cartproducts-phoneinput {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #DDC3B5;
+    border-radius: 6px;
+    font-family: "EB Garamond", serif;
+}
+
+.phone-error {
+    color: red;
+    font-size: 16px;
+    font-family: "EB Garamond", serif;
+}
+
+.cartproducts-phoneinput.invalid {
+    border-color: red;
+}
+
+.cartproducts-phoneinput::placeholder {
+    color: black;
+    font-size: 16px;
+}
+
+.cart-login-message {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #FAF2ED;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.cart-login-message h2 {
+    color: #4A202A;
+    margin-bottom: 20px;
+}
+
+.cart-login-button {
+    background-color: #4A202A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-login-button:hover {
+    background-color: #6B2E3D;
+}
+
+.cartproducts-notes {
+    margin: 10px 0;
+}
+
+.cartproducts-notesinput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #DDC3B5;
+    border-radius: 4px;
+    font-family: "EB Garamond", serif;
+    font-size: 14px;
+    resize: vertical;
+    min-height: 80px;
+    color: #4A202A;
+}
+
+.cartproducts-notesinput:focus {
+    outline: none;
+    border-color: #4A202A;
+}
+
+@media screen and (max-width: 768px) {
+    .cartproducts-listheader {
+        display: none; 
+    }
+
+    .cart-products-list {
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 20px;
+    }
+
+    .cart-products {
+        margin: 20px;
+        padding: 0 10px;
+    }
+
+    .cartproducts-notesinput {
+        font-size: 14px;
+        min-height: 60px;
+    }
+}

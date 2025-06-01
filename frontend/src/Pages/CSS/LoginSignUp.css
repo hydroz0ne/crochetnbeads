@@ -1,0 +1,74 @@
+.loginsignup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+}
+
+.loginsignup-container {
+    width: 100%;
+    max-width: 550px;
+    padding: 40px 60px;
+    border-radius: 10px;
+    background-color: #FAF2ED;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.loginsignup-container h1 {
+    font-size: 24px;
+}
+
+.loginsignup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.loginsignup-form input {
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: EB Garamond, serif;
+}
+
+.loginsignup-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 75px;
+    background-color: #DDC3B5;
+    border: 1px solid #4A202A;
+    color: #4A202A;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: EB Garamond, serif;
+    transition: background 0.3s ease;
+}
+
+.loginsignup-container button:hover {
+    background-color: #4A202A;
+    color: #DDC3B5;
+    border: 1px solid #DDC3B5;
+}
+
+.loginsignup-login {
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.loginsignup-login span {
+    color: #4A202A;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media (max-width: 430px) {
+    .loginsignup-container {
+        margin: 20px;
+        padding: 40px 30px;
+    }
+}

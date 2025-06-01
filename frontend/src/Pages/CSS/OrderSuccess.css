@@ -1,0 +1,106 @@
+.order-success {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #FAF2ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-success-container {
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    padding: 20px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "EB Garamond", serif;
+}
+
+.order-success h1 {
+    color: #4A202A;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.order-success p {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.order-details {
+    border-top: 2px solid #DDC3B5;
+}
+
+.order-details h2,
+.order-items h3,
+.order-summary h3 {
+    color: #4A202A;
+    font-family: "EB Garamond", serif;
+    margin-bottom: 20px;
+}
+
+.order-item {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #DDC3B5;
+}
+
+.order-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.item-details p {
+    margin: 4px 0;
+}
+
+.item-name {
+    font-weight: bold;
+    color: #4A202A;
+}
+
+.order-summary {
+    margin: 20px 0px;
+    border-radius: 4px;
+}
+
+.order-notes {
+    background-color: #FAF2ED;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 5px;
+    white-space: pre-wrap;
+    color: #4A202A;
+}
+
+.disclaimer {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.back-home-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #DDC3B5;
+    color: #4A202A;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "EB Garamond", serif;
+    text-align: center;
+}
+
+.back-home-button:hover {
+    background: #4A202A;
+    color: #DDC3B5;
+}

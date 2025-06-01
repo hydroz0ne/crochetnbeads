@@ -1,0 +1,26 @@
+.popular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+    padding: 48px;
+}
+
+.popular h1 {
+    font-size: 50px;
+    color: #4A202A;
+    font-family: "EB Garamond", serif;
+    margin-bottom: -10px;
+}
+
+.popular p {
+    font-size: 20px;
+}
+
+.popular-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}

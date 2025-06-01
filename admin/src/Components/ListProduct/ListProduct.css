@@ -1,0 +1,142 @@
+.list-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px 50px;
+    margin: 30px;
+    border-radius: 8px;
+    background-color: #FAF2ED;
+    color: #4A202A;
+}
+
+.list-product h1 {
+    font-family: "EB Garamond", serif;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.listproduct-main {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.listproduct-header {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 1.5fr 0.8fr 0.5fr 0.3fr;
+    gap: 15px;
+    width: 100%;
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #DDC3B5;
+    overflow-y: hidden;
+    align-items: center;
+    padding: 15px;
+}
+
+.listproduct-allproducts {
+    width: 100%;
+}
+
+.listproduct-header,
+.listproduct-product {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 1.5fr 0.8fr 0.5fr 0.3fr;
+    gap: 15px;
+    padding: 15px;
+}
+
+.listproduct-product {
+    border-bottom: 1px solid #DDC3B5;
+    align-items: center;
+}
+
+.listproduct-product .category {
+    text-transform: capitalize;
+}
+
+.listproduct-product:hover {
+    background-color: #DDC3B5;
+}
+
+.listproduct-product img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.listproduct-product .remove {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin: 0 auto;
+}
+
+.listproduct-product .remove:hover {
+    transform: scale(1.1);
+}
+
+.toggle-btn {
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: "EB Garamond", serif;
+}
+
+.toggle-btn.available {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.toggle-btn.unavailable {
+    background-color: #f44336;
+    color: white;
+}
+
+.listproduct-product.unavailable {
+    background-color: rgba(244, 67, 54, 0.1);
+}
+
+.toggle-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+@media (max-width: 800px) {
+    .list-product {
+        box-sizing: border-box;
+        width: 95%;
+        height: 100%;
+        padding: 10px 30px;
+        margin: 20px auto;
+        height: auto;
+    }
+
+    .listproduct-header {
+        padding: 15px 0px;
+        font-size: 12px;
+        grid-template-columns: 0.8fr 1fr 1.5fr 0.8fr 0.8fr 0.3fr;
+    }
+
+    .listproduct-product {
+        overflow-x: scroll;
+    }
+
+    .listproduct-product img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .listproduct-product .remove {
+        width: 20px;
+        height: 20px;
+    }
+}
