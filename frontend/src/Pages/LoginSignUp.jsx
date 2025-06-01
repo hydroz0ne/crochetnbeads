@@ -104,10 +104,22 @@ const LoginSignUp = () => {
                 </button>
                 <div>
                     <p style={{textAlign: 'center'}}>- or -</p>
-                    <GoogleLogin onSuccess={handleGoogleLogin} onError={() => console.log('Google login failed.')} useOneTap={false} render={(renderProps) => (
-                        <button onClick={renderProps.onClick} disabled={renderProps.disabled} className="btn" style={{ marginTop: '10px' }} > Sign in with Google </button>
-                    )}
+                    <div style={{ textAlign: 'center', marginTop: '10px' }}>
+                    <GoogleLogin
+                        onSuccess={handleGoogleLogin}
+                        onError={() => console.log('Google login failed.')}
+                        useOneTap={false}
+                        render={(renderProps) => (
+                        <button 
+                            onClick={renderProps.onClick} 
+                            disabled={renderProps.disabled} 
+                            className="btn"
+                        >
+                            Sign in with Google
+                        </button>
+                        )}
                     />
+                    </div>
                 </div>
             </div>
         </div>
