@@ -210,8 +210,7 @@ const CartProducts = () => {
                                         <p className="phone-error">Please enter a valid UAE phone number (05xxxxxxxx).</p>
                                     )}
                                 </div>
-                            </div>
-                            <div>
+
                                 <h3>Additional Notes</h3>
                                 <div className="cartproducts-notes">
                                     <textarea
