@@ -27,37 +27,54 @@ const AddProduct = () => {
         try {
             let responseData;
             let product = productDetails;
-    
+
             let formData = new FormData();
             formData.append('image', image); 
-    
+
             const response = await fetch('https://crochetnbeads.onrender.com/upload', {
                 method: 'POST',
                 body: formData, 
             });
-    
+
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-    
+
             responseData = await response.json();
-    
+
             if (responseData.success) {
-                product.image = responseData.image_url;
+                product.image = responseData.secure_url || responseData.image_url;
                 console.log("Product Details after image upload: ", product);
-                await fetch('https://crochetnbeads.onrender.com/addproduct', {
+                
+                // Add product to database
+                const productResponse = await fetch('https://crochetnbeads.onrender.com/addproduct', {
                     method: 'POST',
                     headers: {
-                        Accept: 'application/json',
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify(product),
-                }).then((resp) => resp.json()).then((data) => {
-                    data.success ? alert("Product added successfully!") : alert("Failed to add product!")
                 });
+
+                const productData = await productResponse.json();
+                if (productData.success) {
+                    alert("Product added successfully!");
+                    // Clear form
+                    setProductDetails({
+                        name: "",
+                        description: "",
+                        category: "plushies",
+                        included: "",
+                        price: "",
+                        image: ""
+                    });
+                    setImage(false);
+                } else {
+                    alert("Failed to add product!");
+                }
             } 
         } catch (error) {
             console.error("Error uploading product:", error);
+            alert("Error adding product: " + error.message);
         }
     }
 

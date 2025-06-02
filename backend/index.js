@@ -8,6 +8,7 @@ const jwt = require('jsonwebtoken');
 const multer = require('multer');
 const path = require('path');
 const cors = require('cors');
+const cloudinary = require('./config/cloudinaryConfig');
 
 // Google OAuth2 Client Configuration
 const { OAuth2Client } = require('google-auth-library');
@@ -27,28 +28,45 @@ app.use(cors());
 mongoose.connect(process.env.MONGODB_KEY)
 
 // Middleware for handling file (image) uploads.
-const storage = multer.diskStorage({
-    destination: './upload/images',
-    filename: (req, file, cb) => {
-        return cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`);
-    }
-});
-
-// Middleware for handling upload endpoint for images.
-const upload = multer({ storage: storage });
+const storage = multer.memoryStorage();
+const upload = multer({ storage });
 app.use('/images', express.static('upload/images'));
-app.post('/upload', upload.single('image'), (req, res) => {
-    if (!req.file) {
-        return res.status(400).json({
-            success: 0,
-            message: "No file uploaded."
+app.post('/upload', upload.single('image'), async (req, res) => {
+    try {
+        if (!req.file) {
+            return res.status(400).json({
+                success: false,
+                message: "No file uploaded."
+            });
+        }
+
+        // Convert buffer to base64
+        const b64 = Buffer.from(req.file.buffer).toString('base64');
+        const dataURI = `data:${req.file.mimetype};base64,${b64}`;
+
+        // Upload to Cloudinary
+        const result = await cloudinary.uploader.upload(dataURI, {
+            folder: 'crochetnbeads/products',
+            resource_type: 'auto',
+            transformation: [
+                { quality: 'auto:good' },
+                { fetch_format: 'auto' }
+            ]
+        });
+
+        res.json({
+            success: true,
+            image_url: result.secure_url,
+            public_id: result.public_id
+        });
+    } catch (error) {
+        console.error('Upload error:', error);
+        res.status(500).json({
+            success: false,
+            message: "Error uploading file",
+            error: error.message
         });
     }
-    
-    res.json({
-        success: 1,
-        image_url: `https://crochetnbeads.onrender.com/images/${req.file.filename}`
-    });
 });
 
 // Schematic for the product.
