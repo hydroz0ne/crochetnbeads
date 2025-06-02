@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken');
 const multer = require('multer');
 const path = require('path');
 const cors = require('cors');
-const cloudinary = require('./config/cloudinaryConfig');
+const cloudinary = require('./config/cloudinary');
 
 // Google OAuth2 Client Configuration
 const { OAuth2Client } = require('google-auth-library');
