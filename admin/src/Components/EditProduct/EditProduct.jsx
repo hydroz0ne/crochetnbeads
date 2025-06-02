@@ -69,7 +69,7 @@ const EditProduct = () => {
 
                 const uploadData = await uploadResponse.json();
                 if (uploadData.success) {
-                    productToUpdate.image = uploadData.secure_url || uploadData.image_url;
+                    productToUpdate.image = uploadData.image_url;
                 }
             }
 
@@ -101,7 +101,7 @@ const EditProduct = () => {
             }
         } catch (error) {
             console.error('Error updating product:', error);
-            alert('Failed to update product: ' + error.message);
+            alert('Failed to update product.');
         }
     };
 
