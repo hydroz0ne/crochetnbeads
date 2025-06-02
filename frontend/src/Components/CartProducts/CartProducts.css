@@ -184,6 +184,7 @@
     font-size: 14px;
     resize: vertical;
     min-height: 80px;
+    max-width: -webkit-fill-available;
     color: #4A202A;
 }
 
